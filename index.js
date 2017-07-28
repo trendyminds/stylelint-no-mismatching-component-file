@@ -1,5 +1,4 @@
 var stylelint = require("stylelint");
-var _ = require("lodash");
 
 var ruleName = "tmi/no-mismatching-component-file"
 
@@ -28,7 +27,6 @@ module.exports = stylelint.createPlugin(ruleName, function (enabled) {
     root.walkRules(function (statement) {
       if (
         statement.parent.type === 'root' &&
-        _.values(statement.parent.indexes)[0] === 0 &&
         fileName !== statement.selector
       ) {
         stylelint.utils.report({

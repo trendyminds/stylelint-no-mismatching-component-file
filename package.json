@@ -1,6 +1,6 @@
 {
   "name": "stylelint-no-mismatching-component-file",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Warns or errors when using a top-level component name that does not match the file name.",
   "main": "index.js",
   "scripts": {},
@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/trendyminds/stylelint-no-mismatching-component-file#readme",
   "dependencies": {
-    "lodash": "^4.17.4",
     "stylelint": "^7.0.0"
   },
   "devDependencies": {
