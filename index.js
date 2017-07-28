@@ -23,7 +23,7 @@ module.exports = stylelint.createPlugin(ruleName, function (enabled) {
     var path = result.opts.from.split('/');
     if (path[path.length - 3] !== 'components') { return }
 
-    var fileName = result.opts.from.match(/_(.*)/g)[0].replace(/_/g, '.').replace(/\.[^/.]+$/g, '');
+    var fileName = '.' + path[path.length - 2];
 
     root.walkRules(function (statement) {
       if (
@@ -35,7 +35,7 @@ module.exports = stylelint.createPlugin(ruleName, function (enabled) {
           ruleName: ruleName,
           result: result,
           node: statement,
-          message: `Your selector does not match this module's file name.`
+          message: `Your selector does not match this component's file name.`
         });
       }
     })
